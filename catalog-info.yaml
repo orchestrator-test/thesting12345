@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: thesting12345
+  description: thesting12345
+  annotations:
+    argocd/app-selector: rht-gitops.com/janus-argocd=thesting12345
+    backstage.io/kubernetes-namespace: orchestrator-gitops
+    backstage.io/kubernetes-id: thesting12345-ci
+    janus-idp.io/tekton: thesting12345
+    github.com/project-slug: orchestrator-test/thesting12345
+    gitlab.com/project-slug: orchestrator-test/thesting12345
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:guest
